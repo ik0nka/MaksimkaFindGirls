@@ -16,3 +16,5 @@ shape = SubResource("RectangleShape2D_n5h7c")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 texture = ExtResource("1_60odi")
+
+[node name="Sprite2D2" type="Sprite2D" parent="CharacterBody2D"]
