@@ -1,0 +1,136 @@
+[gd_scene load_steps=13 format=3 uid="uid://bmtctt3e5e8ym"]
+
+[ext_resource type="Script" path="res://Scripts/UI/main_menu_logic.gd" id="1_e8so3"]
+[ext_resource type="Texture2D" uid="uid://c31rdhsiukngx" path="res://Content/Sprite/button_UI.png" id="2_57o3g"]
+[ext_resource type="AudioStream" uid="uid://l6kvd1etcguo" path="res://videoplayback.wav" id="2_cfn8u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_85qcg"]
+atlas = ExtResource("2_57o3g")
+region = Rect2(0, 0, 67, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4slq"]
+atlas = ExtResource("2_57o3g")
+region = Rect2(71, 2, 67, 29)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05hm0"]
+atlas = ExtResource("2_57o3g")
+region = Rect2(141, 0, 67, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kijgg"]
+atlas = ExtResource("2_57o3g")
+region = Rect2(0, 35, 89, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0ri6"]
+atlas = ExtResource("2_57o3g")
+region = Rect2(92, 37, 89, 29)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4813l"]
+atlas = ExtResource("2_57o3g")
+region = Rect2(185, 35, 89, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yfyak"]
+atlas = ExtResource("2_57o3g")
+region = Rect2(0, 70, 67, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wjnjw"]
+atlas = ExtResource("2_57o3g")
+region = Rect2(71, 72, 67, 29)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jjule"]
+atlas = ExtResource("2_57o3g")
+region = Rect2(141, 70, 67, 31)
+
+[node name="Menu" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.00092, 1)
+script = ExtResource("1_e8so3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+visible = false
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 81.9246
+offset_top = -249.0
+offset_right = 181.925
+offset_bottom = -148.0
+grow_vertical = 0
+scale = Vector2(1.74505, 2.10466)
+
+[node name="Play" type="TextureButton" parent="VBoxContainer"]
+texture_filter = 3
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_85qcg")
+texture_pressed = SubResource("AtlasTexture_k4slq")
+texture_hover = SubResource("AtlasTexture_05hm0")
+stretch_mode = 1
+
+[node name="Settings" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_kijgg")
+texture_pressed = SubResource("AtlasTexture_b0ri6")
+texture_hover = SubResource("AtlasTexture_4813l")
+stretch_mode = 1
+
+[node name="Exit" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_yfyak")
+texture_pressed = SubResource("AtlasTexture_wjnjw")
+texture_hover = SubResource("AtlasTexture_jjule")
+stretch_mode = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(576.47, 188)
+stream = ExtResource("2_cfn8u")
+volume_db = -25.0
+autoplay = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 28.9733
+offset_top = 540.0
+offset_right = 259.973
+offset_bottom = 580.0
+scale = Vector2(2.17689, 2.17689)
+
+[node name="Play" type="TextureButton" parent="HBoxContainer"]
+texture_filter = 3
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_85qcg")
+texture_pressed = SubResource("AtlasTexture_k4slq")
+texture_hover = SubResource("AtlasTexture_05hm0")
+stretch_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Settings" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_kijgg")
+texture_pressed = SubResource("AtlasTexture_b0ri6")
+texture_hover = SubResource("AtlasTexture_4813l")
+stretch_mode = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Exit" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_yfyak")
+texture_pressed = SubResource("AtlasTexture_wjnjw")
+texture_hover = SubResource("AtlasTexture_jjule")
+stretch_mode = 1
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="HBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="HBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="HBoxContainer/Exit" to="." method="_on_exit_pressed"]
