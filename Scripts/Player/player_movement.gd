@@ -1,21 +1,29 @@
 extends CharacterBody2D
 
-var max_speed = 70 # Максимальная скорость
+var max_speed = 20
+var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-func _physics_process(_delta):
-	var input_vector = Vector2.ZERO
-	input_vector.x = Input.get_action_strength("Right") - Input.get_action_strength("Left")
-	
-	velocity = input_vector.normalized() * max_speed
+func _physics_process(delta):
+	velocity.x = lerp(velocity.x, 0.0, 0.2) 
+	var direction = Input.get_action_strength("Right") - Input.get_action_strength("Left")
 
-	if velocity.x > 0:
-		$AnimatedSprite2D.flip_h = false
-	if velocity.x < 0:
-		$AnimatedSprite2D.flip_h = true
+	velocity.x += direction * max_speed 
+	velocity.y += gravity * delta
 
+	_animate(direction)
 	move_and_slide()
 
-func _input(event):
+func _animate(direction):
+	if direction == 0:
+		$AnimatedSprite2D.play("idle")
+	else:
+		# $AnimatedSprite2D.play("run")
+		if direction < 0:
+			$AnimatedSprite2D.flip_h = true
+		elif direction > 0: 
+			$AnimatedSprite2D.flip_h = false
+
+func _input(event): 
 	if event.is_action_pressed("Shift"):
 		max_speed = 85
 	elif event.is_action_released("Shift"):
