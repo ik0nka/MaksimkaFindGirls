@@ -1,8 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://bmtctt3e5e8ym"]
+[gd_scene load_steps=15 format=3 uid="uid://bmtctt3e5e8ym"]
 
 [ext_resource type="Script" path="res://Scripts/UI/main_menu_logic.gd" id="1_e8so3"]
 [ext_resource type="Texture2D" uid="uid://c31rdhsiukngx" path="res://Content/Sprite/button_UI.png" id="2_57o3g"]
 [ext_resource type="AudioStream" uid="uid://bpu778xbkhhao" path="res://Content/Music/main_menu.MP3" id="3_4icvv"]
+[ext_resource type="Texture2D" uid="uid://dte45a05dseyb" path="res://Sprite-0005.png" id="4_aor32"]
+[ext_resource type="PackedScene" uid="uid://c7qa7mp0g2gld" path="res://Characters/player.tscn" id="4_efu6o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_85qcg"]
 atlas = ExtResource("2_57o3g")
@@ -92,6 +94,126 @@ texture_normal = SubResource("AtlasTexture_yfyak")
 texture_pressed = SubResource("AtlasTexture_wjnjw")
 texture_hover = SubResource("AtlasTexture_jjule")
 stretch_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(212.804, 763)
+scale = Vector2(2.65427, 2.65427)
+texture = ExtResource("4_aor32")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(42.9605, 763)
+scale = Vector2(2.65427, 2.65427)
+texture = ExtResource("4_aor32")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(127.882, 763)
+scale = Vector2(2.65427, 2.65427)
+texture = ExtResource("4_aor32")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(467.078, 763)
+scale = Vector2(2.65427, 2.65427)
+texture = ExtResource("4_aor32")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(297.234, 763)
+scale = Vector2(2.65427, 2.65427)
+texture = ExtResource("4_aor32")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(382.156, 763)
+scale = Vector2(2.65427, 2.65427)
+texture = ExtResource("4_aor32")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(721.843, 763)
+scale = Vector2(2.65427, 2.65427)
+texture = ExtResource("4_aor32")
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+position = Vector2(552, 763)
+scale = Vector2(2.65427, 2.65427)
+texture = ExtResource("4_aor32")
+
+[node name="Sprite2D9" type="Sprite2D" parent="."]
+position = Vector2(636.921, 763)
+scale = Vector2(2.65427, 2.65427)
+texture = ExtResource("4_aor32")
+
+[node name="Sprite2D10" type="Sprite2D" parent="."]
+position = Vector2(976.117, 763)
+scale = Vector2(2.65427, 2.65427)
+texture = ExtResource("4_aor32")
+
+[node name="Sprite2D11" type="Sprite2D" parent="."]
+position = Vector2(806.273, 763)
+scale = Vector2(2.65427, 2.65427)
+texture = ExtResource("4_aor32")
+
+[node name="Sprite2D12" type="Sprite2D" parent="."]
+position = Vector2(891.195, 763)
+scale = Vector2(2.65427, 2.65427)
+texture = ExtResource("4_aor32")
+
+[node name="Sprite2D13" type="Sprite2D" parent="."]
+position = Vector2(1230.38, 763)
+scale = Vector2(2.65427, 2.65427)
+texture = ExtResource("4_aor32")
+
+[node name="Sprite2D14" type="Sprite2D" parent="."]
+position = Vector2(1060.53, 763)
+scale = Vector2(2.65427, 2.65427)
+texture = ExtResource("4_aor32")
+
+[node name="Sprite2D15" type="Sprite2D" parent="."]
+position = Vector2(1145.45, 763)
+scale = Vector2(2.65427, 2.65427)
+texture = ExtResource("4_aor32")
+
+[node name="Sprite2D16" type="Sprite2D" parent="."]
+position = Vector2(1484.65, 763)
+scale = Vector2(2.65427, 2.65427)
+texture = ExtResource("4_aor32")
+
+[node name="Sprite2D17" type="Sprite2D" parent="."]
+position = Vector2(1314.81, 763)
+scale = Vector2(2.65427, 2.65427)
+texture = ExtResource("4_aor32")
+
+[node name="Sprite2D18" type="Sprite2D" parent="."]
+position = Vector2(1399.73, 763)
+scale = Vector2(2.65427, 2.65427)
+texture = ExtResource("4_aor32")
+
+[node name="Sprite2D19" type="Sprite2D" parent="."]
+position = Vector2(1739.41, 763)
+scale = Vector2(2.65427, 2.65427)
+texture = ExtResource("4_aor32")
+
+[node name="Sprite2D20" type="Sprite2D" parent="."]
+position = Vector2(1569.57, 763)
+scale = Vector2(2.65427, 2.65427)
+texture = ExtResource("4_aor32")
+
+[node name="Sprite2D21" type="Sprite2D" parent="."]
+position = Vector2(1654.49, 763)
+scale = Vector2(2.65427, 2.65427)
+texture = ExtResource("4_aor32")
+
+[node name="Sprite2D23" type="Sprite2D" parent="."]
+position = Vector2(1823.84, 763)
+scale = Vector2(2.65427, 2.65427)
+texture = ExtResource("4_aor32")
+
+[node name="Sprite2D24" type="Sprite2D" parent="."]
+position = Vector2(1908.77, 763)
+scale = Vector2(2.65427, 2.65427)
+texture = ExtResource("4_aor32")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("4_efu6o")]
+position = Vector2(1814.33, 663)
+scale = Vector2(3.32784, 3.32784)
+physics = false
 
 [connection signal="pressed" from="HBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="HBoxContainer/Settings" to="." method="_on_settings_pressed"]
